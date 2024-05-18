@@ -1,0 +1,106 @@
+.section2 {
+    margin: 0 auto;
+    padding-bottom: 100px;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        height: 620px;
+        width: 100%;
+        left: 0;
+        background: url(../img/bg-menu-01.jpg) center/cover;
+        bottom: 1px;
+        transform: translate(-50, -50%);
+    }
+
+    h2 {
+        font-family: $font1;
+        color: $color1;
+        font-size: 2rem;
+        font-weight: 500;
+        padding-top: 60px;
+    }
+
+    img {
+        height: 25px;
+        margin: 25px 0;
+    }
+
+    ul {
+        @include alignChildren(space-around);
+        width: 50%;
+        color: $grey;
+        margin: 10px auto;
+        min-width: 500px;
+
+        @media screen and (max-width: 680px) {
+            min-width: 200px;
+            width: 90%;
+        }
+
+        li {
+            position: relative;
+            border-bottom: 1px solid $grey;
+            padding-bottom: 8px;
+            margin-bottom: 25px;
+
+            &:hover { 
+                color: $color1;
+                transition: .3s;
+            }
+        }
+    }
+
+    .meals {
+        background: $white;
+        color: $black;
+        width: 85%;
+        max-width: 850px;
+        margin: 0 auto;
+        border-top: 3px solid $color1;
+        padding: 15px 0;
+        display: grid;
+        grid-template-columns: 50% 50% /*repeat(2, 1fr)*/;
+        position: relative;
+        z-index: 1000;
+
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 1fr;
+        }
+
+        .meal {
+            @include alignChildren(space-evenly);
+            position: relative;
+            border-bottom: 1px dashed $grey;
+            margin: 0 20px;
+
+            img {
+                height: 55%;
+                border-radius: 50%
+            }
+
+            .meal-text {
+                text-align: left;
+
+                h3 {
+                    text-transform: uppercase;
+                    font-size: .9rem;
+                    font-family: $font2;
+                    font-weight: 500;
+                }
+
+                p {
+                    font-family: $font3;
+                    font-size: .8rem;
+                    color: $black;
+                }
+            }
+
+            p { 
+                color: $color1;
+                font-family: $font2;
+            }
+        }
+    }
+}

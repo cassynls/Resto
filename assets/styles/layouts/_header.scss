@@ -1,0 +1,93 @@
+header {
+    background: url(../img/bg-slider-06.jpg) center/cover;
+    padding: 0 50px;
+    color: $white;
+
+    nav {
+        height: 12vh;
+        display: grid;
+        grid-template-columns: 10% 82% 8%;
+        align-items: center;
+        max-width: 1100px;
+        margin: 0 auto;
+
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 50% 10% 40%;
+        }
+
+        .logo {
+            font-family: $font1;
+            font-weight: 100;
+            font-size: 2rem;
+            text-align: left;
+        }
+
+        ul {
+            @include alignChildren(space-around);
+            text-transform: uppercase;
+            font-size: .8rem;
+            padding: 0 30px;
+
+            li {
+                &:hover { 
+                    color: $color1;
+                    transition: .3s
+                }
+            }
+
+            @media screen and (max-width: 680px) {
+                visibility: hidden;
+            }
+        }
+
+        .nav-icons {
+            @include alignChildren(space-around);
+            font-size: .8rem;
+            
+            i {
+                &:hover {
+                    transform: scale(1.3);
+                    transition: .2s;
+                }
+            }
+        }
+    }
+
+    .header-text {
+        @include childCenter;
+        height: 88vh;
+
+        div { margin-top: -180px; }
+
+        h2 {
+            font-family: $font1;
+            font-weight: 100;
+            font-size: 3rem;
+            color: $color1;
+        }
+
+        h1 {
+            font-family: $font2;
+            font-weight: 700;
+            font-size: 3.2rem;
+            letter-spacing: 10px;
+            margin-top: -28px;
+
+            @media screen and (max-width: 680px) {
+                font-size: 2rem;
+                margin-top: -15px;
+            }
+        }
+
+        img {
+            margin: 32px 0;
+            height: 25px;
+        }
+
+        h6 {
+            letter-spacing: 6px;
+            font-size: .75rem;
+            font-weight: 200;
+        }
+    }
+}

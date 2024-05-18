@@ -1,0 +1,96 @@
+footer {
+    background: url(../img/bg-footer.jpg) center/cover;
+    text-align: left;
+    color: $white;
+    padding: 65px 32px;
+
+    @media screen and (max-width: 680px) {
+        background: none;
+    }
+
+    .footer-content {
+        max-width: 1050px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+
+        @media screen and (max-width: 680px) {
+            grid-template-columns: 1fr;
+        }
+
+        .left-part {
+            padding-right: 40px;
+            line-height: 1.8;
+
+            @media screen and (max-width: 680px) {
+                display: none;
+            }
+
+            h2 {
+                font-family: $font1;
+                font-weight: 100;
+                font-size: 2.5rem;
+                color: $color1;
+            }
+    
+            p {
+                font-size: .8rem;
+                color: $grey;
+            }
+        }
+    }
+
+    .right-part {
+        padding-left: 50px;
+        display: grid;
+        grid-template-columns: 1fr;
+
+        @media screen and (max-width: 680px) {
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-size: .8rem;
+            font-family: $font2;
+            letter-spacing: .3px;
+
+            @media screen and (max-width: 680px) {
+                font-size: 1.3rem;
+                width: 150px;
+            }
+        }
+    
+        input {
+            background: none;
+            border: 1px solid rgba(166,114,69,0.151);
+            margin-top: 15px;
+            padding: 7px 13px;
+            width: 250px;
+
+            @media screen and (max-width: 680px) {
+                width: 150px;
+            }
+        }
+
+        .follow-us {
+            display: flex;
+            margin-top: 50px;
+
+            ul {
+                @include alignChildren(space-around);
+                flex-wrap: wrap;
+                color: $grey;
+                font-size: .8rem;
+                width: 200px;
+
+                i {
+                    &:hover {
+                        color: $color1;
+                        transition: .2s;
+                        transform: scale(1.3);
+                    }
+                }
+            }
+        }
+    }
+}
